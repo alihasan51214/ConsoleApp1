@@ -1,4 +1,5 @@
 ﻿using System;
+using Npgsql;
 
 namespace Assignment4
 {
@@ -6,11 +7,35 @@ namespace Assignment4
     {
         static void Main(string[] args)
         {
-            var dataService = new DataService();
-            foreach (var elem in dataService.GetOrders())
+            string connectionString =
+            "host=localhost;db=Test;uid=postgres;pwd=bobbystyrer"; 
+
+            // perhaps we should create a new database connection with the same password ?
+            using var conn = new NpgsqlConnection(connectionString);
+            conn.Open();
+
+            using var cmd = new NpgsqlCommand();
+
+            cmd.Connection = conn;
+            cmd.CommandText = "select orderid, orderDate from orders";
+
+            var reader = cmd.ExecuteReader();  
+
+            while (reader.Read())
             {
-                Console.WriteLine(elem);
+                var order = new Order
+                {
+                    Id = reader.GetInt32(0),
+                   OrderDate = reader.GetDateTime(1)
+                };
+                
+
+                Console.WriteLine(order);
+                
+
+                //Console.WriteLine($"Id={reader.GetInt32(0)}, Name={reader.GetString(1)}");
             }
         }
     }
 }
+

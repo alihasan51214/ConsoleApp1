@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aliha\\RiderProjects\\ConsoleApp1\\Assignment4\\Assignment4.csproj": {}
+    "C:\\Users\\bob-w\\source\\repos\\Assignment4\\Assignment4\\Assignment4.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aliha\\RiderProjects\\ConsoleApp1\\Assignment4\\Assignment4.csproj": {
+    "C:\\Users\\bob-w\\source\\repos\\Assignment4\\Assignment4\\Assignment4.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aliha\\RiderProjects\\ConsoleApp1\\Assignment4\\Assignment4.csproj",
+        "projectUniqueName": "C:\\Users\\bob-w\\source\\repos\\Assignment4\\Assignment4\\Assignment4.csproj",
         "projectName": "Assignment4",
-        "projectPath": "C:\\Users\\aliha\\RiderProjects\\ConsoleApp1\\Assignment4\\Assignment4.csproj",
-        "packagesPath": "C:\\Users\\aliha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aliha\\RiderProjects\\ConsoleApp1\\Assignment4\\obj\\",
+        "projectPath": "C:\\Users\\bob-w\\source\\repos\\Assignment4\\Assignment4\\Assignment4.csproj",
+        "packagesPath": "C:\\Users\\bob-w\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bob-w\\source\\repos\\Assignment4\\Assignment4\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\aliha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\bob-w\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -58,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

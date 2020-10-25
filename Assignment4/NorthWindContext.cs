@@ -11,7 +11,7 @@ namespace Assignment4
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("host=localhost;db=NorthWind;uid=postgres;pwd=rtmkak12");
+            optionsBuilder.UseNpgsql("host=localhost;db=NorthWind;uid=postgres;pwd=bobbystyrer");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
