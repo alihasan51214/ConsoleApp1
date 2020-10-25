@@ -1,9 +1,18 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 
 namespace Assignment4
 {
     public class NorthWindContext : DbContext
     {
+         
+         
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Order> Orders { get; set; }
@@ -11,6 +20,7 @@ namespace Assignment4
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+             
             optionsBuilder.UseNpgsql("host=localhost;db=NorthWind;uid=postgres;pwd=bobbystyrer");
         }
 
@@ -22,13 +32,17 @@ namespace Assignment4
             modelBuilder.Entity<Category>().Property(x => x.Description).HasColumnName("description");
             
             modelBuilder.Entity<Order>().ToTable("orders");
-            modelBuilder.Entity<Order>().Property(x => x.Id).HasColumnName("orderid");
+            modelBuilder.Entity<Order>().Property(x => x.OrderId).HasColumnName("orderid");
+            modelBuilder.Entity<Order>().Property(x => x.CustomerId).HasColumnName("customerid");
+            modelBuilder.Entity<Order>().Property(x => x.EmployeeId).HasColumnName("employeeid");
             modelBuilder.Entity<Order>().Property(x => x.OrderDate).HasColumnName("orderdate");
             modelBuilder.Entity<Order>().Property(x => x.RequiredDate).HasColumnName("requireddate");
             modelBuilder.Entity<Order>().Property(x => x.ShippedDate).HasColumnName("shippeddate");
             modelBuilder.Entity<Order>().Property(x => x.Freight).HasColumnName("freight");
             modelBuilder.Entity<Order>().Property(x => x.ShipName).HasColumnName("shipname");
             modelBuilder.Entity<Order>().Property(x => x.ShipCity).HasColumnName("shipcity");
+            modelBuilder.Entity<Order>().Property(x => x.ShipPostalCode).HasColumnName("shipostalcode");
+            modelBuilder.Entity<Order>().Property(x => x.ShipCountry).HasColumnName("shipcountry");
 
             modelBuilder.Entity<OrderDetails>().ToTable("orderdetails");
             modelBuilder.Entity<OrderDetails>().Property(x => x.UnitPrice).HasColumnName("unitprice");
