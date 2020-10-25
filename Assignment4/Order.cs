@@ -22,12 +22,18 @@ namespace Assignment4
             return $"Id = {Id}, OrderDate = {OrderDate}";
         }
 
-        public   void CreateCommand()
+        public  static void CreateCommand()
         {
-            using var cmd = new NpgsqlCommand();
-     
-           
+            string connectionString =
+          "host=localhost;db=Test;uid=postgres;pwd=bobbystyrer";
 
+            // perhaps we should create a new database connection with the same password ?
+            using var conn = new NpgsqlConnection(connectionString);
+            conn.Open();
+
+            using var cmd = new NpgsqlCommand();
+
+            cmd.Connection = conn;
             cmd.CommandText = "select orderid, orderDate from orders";
 
             var reader = cmd.ExecuteReader();
@@ -43,6 +49,8 @@ namespace Assignment4
 
                 Console.WriteLine(order);
 
+
+                //Console.WriteLine($"Id={reader.GetInt32(0)}, Name={reader.GetString(1)}");
             }
         }
 
