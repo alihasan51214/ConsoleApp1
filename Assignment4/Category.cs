@@ -2,13 +2,13 @@
 {
     public class Category
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
+        public int CategoryId { get; set; }
+        public string CategoryName { get; set; }
         public string Description { get; set; }
         
         public override string ToString()
         {
-            return $"Id = {Id}, Name = {Name}, Description = {Description}";
+            return $"Id = {CategoryId}, Name = {CategoryName}, Description = {Description}";
         }
     }
 }

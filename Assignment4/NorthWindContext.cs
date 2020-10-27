@@ -11,8 +11,15 @@ namespace Assignment4
 {
     public class NorthWindContext : DbContext
     {
-         
-         
+        private readonly string _connectionString;
+
+        public NorthWindContext(string connectionString)
+        {
+            _connectionString = connectionString;
+        }
+
+        
+
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Order> Orders { get; set; }
@@ -20,15 +27,17 @@ namespace Assignment4
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-             
-            optionsBuilder.UseNpgsql("host=localhost;db=NorthWind;uid=postgres;pwd=bobbystyrer");
+            
+            optionsBuilder.UseNpgsql(_connectionString); 
+
+        //    optionsBuilder.UseNpgsql("host=localhost;db=NorthWind;uid=postgres;pwd=bobbystyrer");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Category>().ToTable("categories");
-            modelBuilder.Entity<Category>().Property(x => x.Id).HasColumnName("categoryid");
-            modelBuilder.Entity<Category>().Property(x => x.Name).HasColumnName("categoryname");
+            modelBuilder.Entity<Category>().Property(x => x.CategoryId).HasColumnName("categoryid");
+            modelBuilder.Entity<Category>().Property(x => x.CategoryName).HasColumnName("categoryname");
             modelBuilder.Entity<Category>().Property(x => x.Description).HasColumnName("description");
             
             modelBuilder.Entity<Order>().ToTable("orders");
@@ -45,15 +54,19 @@ namespace Assignment4
             modelBuilder.Entity<Order>().Property(x => x.ShipCountry).HasColumnName("shipcountry");
 
             modelBuilder.Entity<OrderDetails>().ToTable("orderdetails");
+            modelBuilder.Entity<Order>().Property(x => x.OrderId).HasColumnName("orderid");
+            modelBuilder.Entity<Product>().Property(x => x.ProductId).HasColumnName("productid");
             modelBuilder.Entity<OrderDetails>().Property(x => x.UnitPrice).HasColumnName("unitprice");
             modelBuilder.Entity<OrderDetails>().Property(x => x.Quantity).HasColumnName("quantity");
             modelBuilder.Entity<OrderDetails>().Property(x => x.Discount).HasColumnName("discount");
 
             modelBuilder.Entity<Product>().ToTable("products");
-            modelBuilder.Entity<Product>().Property(x => x.Id).HasColumnName("productid");
-            modelBuilder.Entity<Product>().Property(x => x.Name).HasColumnName("productname");
-            modelBuilder.Entity<Product>().Property(x => x.UnitPrice).HasColumnName("unitprice");
+            modelBuilder.Entity<Product>().Property(x => x.ProductId).HasColumnName("productid");
+            modelBuilder.Entity<Product>().Property(x => x.ProductName).HasColumnName("productname");
+            modelBuilder.Entity<Product>().Property(x => x.SupplierId).HasColumnName("supplierid");
+            modelBuilder.Entity<Product>().Property(x => x.CategoryId).HasColumnName("categoryid");
             modelBuilder.Entity<Product>().Property(x => x.QuantityPerUnit).HasColumnName("quantityperunit");
+            modelBuilder.Entity<Product>().Property(x => x.UnitPrice).HasColumnName("unitprice");
             modelBuilder.Entity<Product>().Property(x => x.UnitsInStock).HasColumnName("unitsinstock");
         }
     }
