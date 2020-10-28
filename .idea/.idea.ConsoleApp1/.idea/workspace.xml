@@ -4,19 +4,32 @@
     <projectFile>ConsoleApp1/ConsoleApp1.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf98a99b-3226-4f37-8537-5fe15ff2464c" name="Default Changelist" comment="" />
+    <list default="true" id="cf98a99b-3226-4f37-8537-5fe15ff2464c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Assignment4/obj/Assignment4.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment4/obj/Assignment4.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment4/obj/Assignment4.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment4/obj/Assignment4.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment4/obj/Debug/netcoreapp3.1/Assignment4.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment4/obj/Debug/netcoreapp3.1/Assignment4.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment4/obj/Debug/netcoreapp3.1/Assignment4.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment4/obj/Debug/netcoreapp3.1/Assignment4.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment4/obj/Debug/netcoreapp3.1/Assignment4.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment4/obj/Debug/netcoreapp3.1/Assignment4.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment4/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment4/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment4/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment4/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment4/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment4/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment4/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment4/obj/rider.project.restore.info" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assignment4/Category.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assignment4/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assignment4/NorthWindContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assignment4/Order.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assignment4/OrderDetails.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assignment4/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assignment4/NorthWindContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assignment4/Product.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assignment4/Category.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -30,9 +43,9 @@
         <option value="$PROJECT_DIR$/Assignment4/Order.cs" />
         <option value="$PROJECT_DIR$/Assignment4/OrderDetails.cs" />
         <option value="$PROJECT_DIR$/Assignment4/NorthWindContext.cs" />
-        <option value="$PROJECT_DIR$/Assignment4/Category.cs" />
         <option value="$PROJECT_DIR$/Assignment4/Program.cs" />
         <option value="$PROJECT_DIR$/Assignment4/DataService.cs" />
+        <option value="$PROJECT_DIR$/Assignment4/Category.cs" />
       </list>
     </option>
   </component>
@@ -81,13 +94,14 @@
       <option name="presentableId" value="Default" />
       <updated>1603361193631</updated>
       <workItem from="1603361200079" duration="9884000" />
+      <workItem from="1603902819530" duration="14000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

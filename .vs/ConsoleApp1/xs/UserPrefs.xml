@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{1975875E-E816-47EB-B6AE-31C51E7F1D05}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assignment4/OrderDetails.cs">
+    <Files>
+      <File FileName="../../../Downloads/ConsoleApp1-master/Assignment4/Category.cs" Line="14" Column="2" />
+      <File FileName="Assignment4/Order.cs" Line="17" Column="47" />
+      <File FileName="Assignment4/OrderDetails.cs" Line="25" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ConsoleApp1" expanded="True">
+            <Node name="Assignment4" expanded="True">
+              <Node name="OrderDetails.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Assignment4 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
