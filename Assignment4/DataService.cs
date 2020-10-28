@@ -28,15 +28,15 @@ namespace Assignment4
         public IList<OrderDetails> GetOrderDetails()
         {
             using (var ctx = new NorthWindContext(_connectionString))
-                {
+            {
 
-               
-                    return ctx.OrderDetails
-                   .Include(x => x.Order)
-                    
-                    .ToList();
+                var OrderDetailsContext = ctx.OrderDetails;
+                return ctx.OrderDetails
+                 .Include(b => b.Order)
+                   .Include(b => b.Product)
+                  .ToList();
 
-            ;
+                ;
             }
 
         }
@@ -49,14 +49,16 @@ namespace Assignment4
 
         public IList<Product> GetProducts()
         {
-            using var ctx = new NorthWindContext(_connectionString);
-            return ctx.Products
-                .Include(x => x.Category)
-                .ToList();
+            using (var ctx = new NorthWindContext(_connectionString))
+            {
+                var ProductContext = ctx.Products;
+                return ctx.Products
+                    .Include(x => x.Category)
+                    .ToList();
+            }
         }
     }
 }
-
 
 
  

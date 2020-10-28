@@ -18,7 +18,10 @@ namespace Assignment4
             _connectionString = connectionString;
         }
 
-        
+        public static readonly ILoggerFactory MyLoggerFactory
+            = LoggerFactory.Create(builder => { builder.AddConsole(); });
+
+
 
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
@@ -27,7 +30,7 @@ namespace Assignment4
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            
+            optionsBuilder.UseLoggerFactory(MyLoggerFactory);
             optionsBuilder.UseNpgsql(_connectionString); 
 
         //    optionsBuilder.UseNpgsql("host=localhost;db=NorthWind;uid=postgres;pwd=bobbystyrer");
